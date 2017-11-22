@@ -813,7 +813,7 @@ export default {
     callCallbackGroup (field, list) {
       if ( ! this.hasCallback(field)) return
       if(typeof(field.callback) == 'function') {
-       return field.callback(this.getObjectValue(field,list))
+       return field.callback(field,list)
       }
       let args = field.callback.split('|')
       let func = args.shift()
